@@ -24,7 +24,7 @@ import { Slider } from "@/components/ui/slider";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { useTheme } from '@/contexts/ThemeContext';
-import { Sun, Moon, Monitor, Font } from 'lucide-react';
+import { Sun, Moon, Monitor, Type } from 'lucide-react';
 
 export const Settings = () => {
   const { theme, fontSizeBase, setTheme, setFontSizeBase } = useTheme();
@@ -45,7 +45,7 @@ export const Settings = () => {
               Theme
             </TabsTrigger>
             <TabsTrigger value="font" className="text-base-dynamic">
-              <Font className="h-4 w-4 mr-2" />
+              <Type className="h-4 w-4 mr-2" />
               Font Size
             </TabsTrigger>
           </TabsList>
