@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,24 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Add custom theme colors
+				theme: {
+					blue: '#0EA5E9',
+					purple: '#8B5CF6',
+					pink: '#D946EF',
+					gray: {
+						50: '#F9FAFB',
+						100: '#F3F4F6',
+						200: '#E5E7EB',
+						300: '#D1D5DB',
+						400: '#9CA3AF',
+						500: '#6B7280',
+						600: '#4B5563',
+						700: '#374151',
+						800: '#1F2937',
+						900: '#111827',
+					}
 				}
 			},
 			borderRadius: {
@@ -84,11 +103,26 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.3s ease-out'
+			},
+			fontSize: {
+				'xs-dynamic': 'calc(var(--font-size-base) * 0.75)',
+				'sm-dynamic': 'calc(var(--font-size-base) * 0.875)',
+				'base-dynamic': 'var(--font-size-base)',
+				'lg-dynamic': 'calc(var(--font-size-base) * 1.125)',
+				'xl-dynamic': 'calc(var(--font-size-base) * 1.25)',
+				'2xl-dynamic': 'calc(var(--font-size-base) * 1.5)',
+				'3xl-dynamic': 'calc(var(--font-size-base) * 1.875)',
+				'4xl-dynamic': 'calc(var(--font-size-base) * 2.25)',
 			}
 		}
 	},
